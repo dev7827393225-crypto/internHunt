@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.InternHunt" parent="android:Theme.Material.Light.NoActionBar" >
+    </style>
+    <style name="Theme.MyApp.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#312507</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/img_1</item>
+        <item name="postSplashScreenTheme">@style/Theme.InternHunt</item>
+    </style>
+</resources>
