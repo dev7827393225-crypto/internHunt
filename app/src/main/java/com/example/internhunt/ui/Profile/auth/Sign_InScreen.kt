@@ -139,7 +139,7 @@ fun Sign_inScreen(
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        // 🔹 Handle auth state
+        //    Handle auth state
         when (authState) {
             is Resource.Loading -> {
                 CircularProgressIndicator()

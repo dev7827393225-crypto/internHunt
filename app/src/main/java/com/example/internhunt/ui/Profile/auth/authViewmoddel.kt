@@ -31,8 +31,6 @@ var name= MutableStateFlow("")
 
 
 
-
-
     var authState by mutableStateOf<Resource<FirebaseUser>>(Resource.Idle)
         private set
 
@@ -78,7 +76,9 @@ var name= MutableStateFlow("")
                 )
         }
     }
-
+fun logout() {
+    authRepository.logout()
+}
     fun resetState() {
         authState = Resource.Idle
     }

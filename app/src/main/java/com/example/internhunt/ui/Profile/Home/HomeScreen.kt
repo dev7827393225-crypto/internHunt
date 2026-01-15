@@ -22,7 +22,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -31,25 +30,13 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import com.example.internhunt.ui.Profile.Navigation.BottomNavigationBar
 import com.example.internhunt.R
-import com.example.internhunt.data.model.AuthRepository
-import com.example.internhunt.data.model.FirebaseAuthSource
-import com.example.internhunt.ui.auth.AuthViewModel
-import com.example.internhunt.ui.auth.AuthViewModelFactory
-import androidx.compose.runtime.collectAsState
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun HomeScreen(navController: NavHostController) {
-    val authSource = remember { FirebaseAuthSource() }
-    val authRepository = remember { AuthRepository(authSource) }
-
-    val authViewModel: AuthViewModel = viewModel(
-        factory = AuthViewModelFactory(authRepository)
-    )
 
     Scaffold(
         bottomBar = {
@@ -81,7 +68,7 @@ modifier = Modifier.fillMaxSize()
                     Spacer(modifier = Modifier.height(1.dp))
 
                     Text(
-                        text = authViewModel.fullName.collectAsState().value
+                        text = "Dev Sengar"
                         , modifier = Modifier.padding(start = 0.dp)
                         , fontSize = 35.sp
                         , color = Color.White
