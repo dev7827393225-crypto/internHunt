@@ -22,7 +22,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import com.example.internhunt.R
-import com.example.internhunt.data.model.AuthRepository
+import com.example.internhunt.data.model.repo.AuthRepository
 import com.example.internhunt.data.model.FirebaseAuthSource
 import com.example.internhunt.ui.auth.AuthViewModel
 import com.example.internhunt.ui.auth.AuthViewModelFactory

@@ -4,6 +4,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Build
 import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.PersonAddAlt1
 import androidx.compose.material.icons.filled.PersonSearch
 import androidx.compose.material.icons.filled.SaveAs
@@ -22,12 +23,12 @@ sealed class BottomBarItem (
     object jobdetail: BottomBarItem(
         route = "jobdetail"
         , title = "job"
-        ,icon=Icons.Default.SaveAs
+        ,icon=Icons.Default.Person
     )
     object saved: BottomBarItem(
         route = "saved"
         , title = "Saved"
-, icon = Icons.Default.PersonAddAlt1
+, icon = Icons.Default.SaveAs
         )
     object search: BottomBarItem(
         route = "search"

@@ -13,8 +13,8 @@ fun BottomNavigationBar(navController: NavHostController) {
 val items=listOf(
     BottomBarItem.Home,
     BottomBarItem.search,
-    BottomBarItem.jobdetail,
     BottomBarItem.saved,
+    BottomBarItem.jobdetail,
     )
 
     NavigationBar {

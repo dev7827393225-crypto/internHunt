@@ -1,7 +1,8 @@
-package com.example.internhunt.data.model
+package com.example.internhunt.data.model.repo
 
 
 //import com.example.internhunt.data.remote.FirebaseAuthSource
+import com.example.internhunt.data.model.FirebaseAuthSource
 import com.google.firebase.auth.FirebaseUser
 
 class AuthRepository(

@@ -105,14 +105,14 @@ fun ProfileScreen(navController: NavHostController) {
             }
             Card(
                 modifier = Modifier.padding(
-                    start = 120.dp,top=200.dp)
+                    start = 120.dp,top=140.dp)
                     .size(160.dp)
 
                 , shape = CircleShape
 
 
             ) {
-                Image(painter = painterResource(R.drawable.img_2)
+                Image(painter = painterResource(R.drawable.img_7)
                     , contentDescription = ""
                     , alignment = Alignment.Center
 
@@ -120,7 +120,7 @@ fun ProfileScreen(navController: NavHostController) {
             }
             LazyColumn(
                 modifier = Modifier.
-                padding(start = 10.dp, top = 380.dp)
+                padding(start = 10.dp, top = 320.dp)
                     .fillMaxWidth(1f)
             ){
                 items(items){item->
@@ -142,7 +142,7 @@ fun ProfileScreen(navController: NavHostController) {
                         Spacer(modifier = Modifier.width(40.dp))
                         Text(
                             text = item.name,
-                            fontSize = 22.sp
+                            fontSize = 26.sp
                             , modifier = Modifier.clickable(
                                 onClick = {
 

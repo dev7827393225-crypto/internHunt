@@ -76,7 +76,7 @@ modifier = Modifier.fillMaxSize()
                     )
                 }
 
-                Image(painter = painterResource(R.drawable.img_1),
+                Image(painter = painterResource(R.drawable.img_7),
                     contentDescription = null
                     , modifier = Modifier.size(50.dp)
                         .padding(top =  0.dp)

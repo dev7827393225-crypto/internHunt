@@ -6,7 +6,7 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import com.example.internhunt.data.model.AuthRepository
+import com.example.internhunt.data.model.repo.AuthRepository
 //import com.example.internhunt.data.repository.AuthRepository
 //import com.example.internhunt.utils.Resource
 import com.google.firebase.auth.FirebaseUser
