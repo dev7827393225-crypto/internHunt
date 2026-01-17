@@ -23,7 +23,7 @@ import com.example.internhunt.ui.auth.AuthViewModel
 import com.example.internhunt.ui.auth.Resource
 import androidx.compose.runtime.collectAsState
 import com.example.internhunt.data.model.repo.AuthRepository
-import com.example.internhunt.data.model.FirebaseAuthSource
+import com.example.internhunt.data.model.remote.FirebaseAuthSource
 import com.example.internhunt.ui.auth.AuthViewModelFactory
 
 @Composable

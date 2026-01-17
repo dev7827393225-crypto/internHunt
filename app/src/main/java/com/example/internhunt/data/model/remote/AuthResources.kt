@@ -1,4 +1,4 @@
-package com.example.internhunt.data.model
+package com.example.internhunt.data.model.remote
 
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser

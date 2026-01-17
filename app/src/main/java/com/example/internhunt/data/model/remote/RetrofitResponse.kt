@@ -8,9 +8,9 @@ data class InternshipResponse(
 data class Internship(
     val id: String,
     val title: String,
-    val company: String,
-    val location: String,
-    val redirect_url: String
+    val company: Company,
+    val location: Location,
+    val redirect_url: String?
 )
 
 data class Company(val display_name: String)

@@ -6,7 +6,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.internhunt.data.model.repo.AuthRepository
-import com.example.internhunt.data.model.FirebaseAuthSource
+import com.example.internhunt.data.model.remote.FirebaseAuthSource
 import com.example.internhunt.ui.Profile.Home.HomeScreen
 import com.example.internhunt.ui.Profile.auth.LoginScreen
 import com.example.internhunt.ui.Profile.profileScreen.ProfileScreen
