@@ -1,7 +1,7 @@
 package com.example.internhunt.data.model.remote
 
 data class InternshipResponse(
-    val result: List<Internship>
+    val results: List<Internship>
 
 ) {
 }

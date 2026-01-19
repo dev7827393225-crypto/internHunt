@@ -27,8 +27,8 @@ fun InternshipHorizontalCard(internship: Internship) {
 
     Card(
         modifier = Modifier
-            .width(230.dp)
-            .height(140.dp),
+            .width(240.dp)
+            .height(220.dp),
         shape = RoundedCornerShape(18.dp),
         elevation = CardDefaults.cardElevation(6.dp)
     ) {
@@ -44,29 +44,35 @@ fun InternshipHorizontalCard(internship: Internship) {
                 CompanyInitialLogo(internship.company.display_name)
 
 
-                Spacer(modifier = Modifier.width(10.dp))
+                Spacer(modifier = Modifier.width(30.dp))
 
                 Column {
                     Text(
                         internship.title,
                         fontWeight = FontWeight.Bold,
-                        fontSize = 14.sp,
+                        fontSize = 22.sp,
                         maxLines = 2
                     )
 
                     Text(
                         internship.company.display_name,
-                        fontSize = 12.sp,
+                        fontSize = 16.sp,
                         color = Color.Gray
                     )
                 }
             }
-
+Spacer(modifier = Modifier.height(10.dp))
             Text(
                 internship.location.display_name,
-                fontSize = 12.sp,
+                fontSize = 18.sp,
                 color = Color.Gray
             )
+            Spacer(modifier = Modifier.height(7.dp))
+Text(
+    text="URL:"+internship.redirect_url.toString(),
+    fontSize = 14.sp,
+    color = Color.Blue
+)
         }
     }
 }

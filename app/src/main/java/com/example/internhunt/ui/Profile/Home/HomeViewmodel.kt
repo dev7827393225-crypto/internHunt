@@ -27,8 +27,13 @@ class HomeViewmodel(
             try {
                 val response = repository.fetchInternships()
                 if (response.isSuccessful) {
+                    println("Internships size = ${_internships.value.size}")
+
                     _internships.value =
-                        response.body()?.result ?: emptyList()
+                        response.body()?.results ?: emptyList()
+                }
+                else{
+                    println("API ERROR :${response.code()}")
                 }
             } catch (e: Exception) {
                 e.printStackTrace()

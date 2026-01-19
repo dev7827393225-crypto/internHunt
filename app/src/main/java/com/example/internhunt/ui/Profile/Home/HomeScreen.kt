@@ -78,7 +78,7 @@ fun HomeScreen(navController: NavHostController) {
                     contentDescription = null,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(200.dp),
+                        .height(210.dp),
                     contentScale = ContentScale.Crop
                 )
 
