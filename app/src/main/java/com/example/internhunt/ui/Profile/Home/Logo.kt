@@ -38,7 +38,7 @@ fun CompanyInitialLogo(companyName: String) {
 
     Box(
         modifier = Modifier
-            .size(49.dp)
+            .size(59.dp)
             .clip(RoundedCornerShape(10.dp))
             .background(bgColor),
         contentAlignment = Alignment.Center

@@ -1,5 +1,6 @@
 package com.example.internhunt.ui.Profile.Home
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -16,15 +17,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.internhunt.data.model.remote.Internship
+import com.example.internhunt.ui.Profile.Search.openUrl
 
 
 @Composable
 fun InternshipHorizontalCard(internship: Internship) {
-
+val context= LocalContext.current
     Card(
         modifier = Modifier
             .width(240.dp)
@@ -69,9 +72,12 @@ Spacer(modifier = Modifier.height(10.dp))
             )
             Spacer(modifier = Modifier.height(7.dp))
 Text(
-    text="URL:"+internship.redirect_url.toString(),
+    text=""+internship.redirect_url.toString(),
     fontSize = 14.sp,
     color = Color.Blue
+    , modifier = Modifier.padding(start = 0.dp).clickable{
+        openUrl(context = context,url=internship.redirect_url.toString())
+    }
 )
         }
     }

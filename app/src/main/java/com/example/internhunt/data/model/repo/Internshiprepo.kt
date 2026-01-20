@@ -29,10 +29,19 @@ class InternshipRepository(
         }
     }
 
-    suspend fun saveInternship(internship: InternshipEntity) =
-        dao.insertInternship(internship)
+    suspend fun saveInternship(internship: Internship) =
+        dao.insertInternship(internship.toEntity())
 
     suspend fun getSavedInternships() =
         dao.getAllInternships()
 }
 
+fun Internship.toEntity(): InternshipEntity {
+    return InternshipEntity(
+        id = this.id.toLong(),  // Long
+        title = this.title,
+        company = this.company.display_name,
+        location = this.location.display_name,
+        applyUrl = this.redirect_url
+    )
+}

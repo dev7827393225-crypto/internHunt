@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.internhunt.ui.Profile.Navigation.NavScreen
+import com.example.internhunt.ui.Profile.Search.SearchCard
 import com.example.internhunt.ui.Profile.theme.InternHuntTheme
 
 class MainActivity : ComponentActivity() {
@@ -18,6 +19,7 @@ class MainActivity : ComponentActivity() {
             InternHuntTheme {
 
                NavScreen()
+
                 }
             }
         }

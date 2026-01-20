@@ -6,7 +6,7 @@ data class InternshipResponse(
 ) {
 }
 data class Internship(
-    val id: String,
+    val id: Long,
     val title: String,
     val company: Company,
     val location: Location,

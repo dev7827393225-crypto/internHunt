@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.example.internhunt.data.model.remote.Internship
 import com.example.internhunt.data.model.repo.InternshipRepository
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
@@ -24,6 +25,7 @@ class HomeViewmodel(
 
     private fun fetchInternships() {
         viewModelScope.launch {
+            delay(400)
             try {
                 val response = repository.fetchInternships()
                 if (response.isSuccessful) {

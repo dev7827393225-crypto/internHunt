@@ -5,9 +5,9 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "internshipTable")
 data class InternshipEntity(
-    @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    @PrimaryKey(autoGenerate = true) val id: Long,
     val title: String,
     val company: String,
     val location: String,
-    val applyUrl: String
+    val applyUrl: String?
     )

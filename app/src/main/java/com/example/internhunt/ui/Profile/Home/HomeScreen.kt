@@ -1,7 +1,6 @@
 package com.example.internhunt.ui.Profile.Home
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -13,14 +12,10 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.AssistChip
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -40,7 +35,6 @@ import androidx.navigation.NavHostController
 import com.example.internhunt.ui.Profile.Navigation.BottomNavigationBar
 import com.example.internhunt.R
 import com.example.internhunt.data.model.local.InternshipDatabase
-import com.example.internhunt.data.model.remote.Internship
 import com.example.internhunt.data.model.remote.RetrofitInstance
 import com.example.internhunt.data.model.repo.InternshipRepository
 
@@ -116,7 +110,7 @@ fun HomeScreen(navController: NavHostController) {
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 12.dp),
-                horizontalArrangement = Arrangement.spacedBy(12.dp)
+                horizontalArrangement = Arrangement.SpaceBetween
             ) {
 
                 StatCard(
@@ -165,8 +159,8 @@ fun HomeScreen(navController: NavHostController) {
 @Composable
 fun FilterChips() {
     LazyRow(
-        modifier = Modifier.padding(start = 16.dp, top = 0.dp, end = 10.dp),
-        horizontalArrangement = Arrangement.spacedBy(14.dp)
+        modifier = Modifier.padding(start = 16.dp, top = 0.dp, end = 10.dp).fillMaxWidth(),
+        horizontalArrangement = Arrangement.SpaceBetween
     ) {
         items(listOf("All", "Remote", "Full-time", "Part-time")) { chip ->
             AssistChip(
