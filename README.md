@@ -53,11 +53,11 @@
 
 ## Screenshots
 
-*(Add your screenshots here to make the repo visually appealing)*  
+ 
 
 - Login Screen  
 - Sign Up Screen  
-- Home/Profile Screen  
+- Home/Profile Screen 
 
 ---
 
