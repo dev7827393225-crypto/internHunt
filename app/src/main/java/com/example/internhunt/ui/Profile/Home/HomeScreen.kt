@@ -66,7 +66,7 @@ fun HomeScreen(navController: NavHostController) {
         ) {
 
             //  Top Header Background
-            Box {
+            Box {1
                 Image(
                     painter = painterResource(R.drawable.pag2),
                     contentDescription = null,

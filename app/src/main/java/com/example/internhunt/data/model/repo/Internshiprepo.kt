@@ -32,8 +32,12 @@ class InternshipRepository(
     suspend fun saveInternship(internship: Internship) =
         dao.insertInternship(internship.toEntity())
 
-    suspend fun getSavedInternships() =
+     fun getSavedInternships() =
         dao.getAllInternships()
+
+
+    suspend fun deleteInternship(internship: InternshipEntity) =
+        dao.deleteInternship(internship)
 }
 
 fun Internship.toEntity(): InternshipEntity {

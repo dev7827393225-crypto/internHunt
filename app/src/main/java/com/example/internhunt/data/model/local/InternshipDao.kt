@@ -5,6 +5,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface InternshipDao {
@@ -13,7 +14,7 @@ interface InternshipDao {
     suspend fun insertInternship(internship: InternshipEntity)
 
     @Query("SELECT * FROM internshipTable")
-    suspend fun getAllInternships(): List<InternshipEntity>
+     fun getAllInternships(): Flow<List<InternshipEntity>>
 
     @Delete
     suspend fun deleteInternship(internship: InternshipEntity)
